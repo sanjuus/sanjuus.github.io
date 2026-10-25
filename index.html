@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -422,7 +421,10 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
+
       *, *::before, *::after {
         transition-duration: 0.01ms !important;
       }
@@ -525,26 +527,25 @@
         </p>
       </div>
 
-      
-    <div class="panel timeline">
-      <article class="timeline-item">
-        <p class="date">Current Role</p>
-        <h3>Cloud & Infrastructure Engineer</h3>
-        <p><strong>LTM</strong></p>
-        <p>
-          Handle P1 activities and manage tickets received from multiple
-          customers. Route tickets to the appropriate teams when required
-          and perform validations using the OpsRamp tool.
-        </p>
-        <div class="tags">
-          <span class="tag">P1 Activities</span>
-          <span class="tag">Ticket Management</span>
-          <span class="tag">OpsRamp</span>
-          <span class="tag">Infrastructure Validation</span>
-        </div>
-      </article>
-    </div>
-    
+      <div class="panel timeline">
+        <article class="timeline-item">
+          <p class="date">Current Role</p>
+          <h3>Cloud & Infrastructure Engineer</h3>
+          <p><strong>LTM</strong></p>
+          <p>
+            Handle P1 activities and manage tickets received from multiple
+            customers. Route tickets to the appropriate teams when required
+            and perform validations using the OpsRamp tool.
+          </p>
+          <div class="tags">
+            <span class="tag">P1 Activities</span>
+            <span class="tag">Ticket Management</span>
+            <span class="tag">OpsRamp</span>
+            <span class="tag">Infrastructure Validation</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <!-- Education -->
     <section class="section container" id="education">
@@ -594,6 +595,9 @@
           <span class="skill">Scikit-learn</span>
           <span class="skill">PyTorch</span>
           <span class="skill">Torchvision</span>
+          <span class="skill">Natural Language Processing (NLP)</span>
+          <span class="skill">RNNs</span>
+          <span class="skill">GRUs</span>
           <span class="skill">Transfer Learning</span>
           <span class="skill">Model Evaluation</span>
           <span class="skill">Classification Metrics</span>
@@ -629,60 +633,59 @@
       </div>
 
       <div class="grid">
-        
-      <article class="card">
-        <span class="tag">Computer Vision · Deep Learning</span>
-        <h3>EcoVision AI</h3>
-        <p>
-          An AI-powered waste classification application that predicts
-          one of six waste categories from an uploaded image and provides
-          practical disposal guidance.
-        </p>
-        <p>
-          Built using transfer learning with a pretrained ResNet18 model,
-          PyTorch, and a Streamlit interface.
-        </p>
-        <p class="metric">
-          Test Accuracy: <strong>88.68%</strong>
-        </p>
-        <p class="metric">
-          Macro F1-score: <strong>87.58%</strong>
-        </p>
-        <p class="tech">
-          Python · PyTorch · Torchvision · Streamlit · Pillow
-        </p>
-        <a class="project-link"
-           href="https://github.com/sanjuus/EcoVision-AI"
-           target="_blank" rel="noopener noreferrer">
-          View Source Code on GitHub ↗
-        </a>
-      </article>
-      
-      <article class="card">
-        <span class="tag">Machine Learning · Sustainability</span>
-        <h3>Carbon Footprint Tracker</h3>
-        <p>
-          A predictive web application that estimates weekly carbon
-          emissions based on personal lifestyle habits, helping users
-          understand their environmental impact.
-        </p>
-        <p>
-          Uses a Lasso Regression model to predict weekly CO₂ emissions
-          from factors such as transportation, electricity and water
-          consumption, diet, and waste generation.
-        </p>
-        <p>
-          Provides personalized eco-tips and a motivational environmental
-          quote through a simple, interactive interface.
-        </p>
-        <p class="tech">
-          Python · Pandas · NumPy · Scikit-learn · Lasso Regression · Streamlit
-        </p>
-        <span class="project-link">
-          Machine Learning Project
-        </span>
-      </article>
+        <article class="card">
+          <span class="tag">Computer Vision · Deep Learning</span>
+          <h3>EcoVision AI</h3>
+          <p>
+            An AI-powered waste classification application that predicts
+            one of six waste categories from an uploaded image and provides
+            practical disposal guidance.
+          </p>
+          <p>
+            Built using transfer learning with a pretrained ResNet18 model,
+            PyTorch, and a Streamlit interface.
+          </p>
+          <p class="metric">
+            Test Accuracy: <strong>88.68%</strong>
+          </p>
+          <p class="metric">
+            Macro F1-score: <strong>87.58%</strong>
+          </p>
+          <p class="tech">
+            Python · PyTorch · Torchvision · Streamlit · Pillow
+          </p>
+          <a class="project-link"
+             href="https://github.com/sanjuus/EcoVision-AI"
+             target="_blank" rel="noopener noreferrer">
+            View Source Code on GitHub ↗
+          </a>
+        </article>
 
+        <article class="card">
+          <span class="tag">Machine Learning · Sustainability</span>
+          <h3>Carbon Footprint Tracker</h3>
+          <p>
+            A predictive web application that estimates weekly carbon
+            emissions based on personal lifestyle habits, helping users
+            understand their environmental impact.
+          </p>
+          <p>
+            Uses a Lasso Regression model to predict weekly CO₂ emissions
+            from factors such as transportation, electricity and water
+            consumption, diet, and waste generation.
+          </p>
+          <p>
+            Provides personalized eco-tips and a motivational environmental
+            quote through a simple, interactive interface.
+          </p>
+          <p class="tech">
+            Python · Pandas · NumPy · Scikit-learn · Lasso Regression · Streamlit
+          </p>
+          <span class="project-link">
+            Machine Learning Project
+          </span>
+        </article>
+      </div>
 
       <p class="muted" style="margin-top: 22px; font-size: 0.9rem;">
         EcoVision AI metrics are from evaluation on the project's held-out
@@ -739,4 +742,3 @@
   </footer>
 </body>
 </html>
-
