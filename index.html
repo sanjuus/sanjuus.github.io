@@ -1,1 +1,737 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1120">
+  <meta name="description" content="Sanjay Bora's portfolio — AI/ML Engineer aspirant with a background in Cloud and Infrastructure Engineering, machine learning, deep learning, and computer vision.">
+  <title>Sanjay Bora | AI/ML Engineer Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --surface: #111b2e;
+      --surface-light: #16233a;
+      --text: #edf2f7;
+      --muted: #a4b2c8;
+      --accent: #6ee7a8;
+      --border: #263650;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--max-width), 90%);
+      margin: 0 auto;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    /* Navigation */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 17, 32, 0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 23px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -120px;
+      top: 70px;
+      background: rgba(110, 231, 168, 0.07);
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 800px;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 30px;
+      padding: 7px 13px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 26px;
+    }
+
+    .availability-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      letter-spacing: -2px;
+      margin: 18px 0;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .tags, .buttons, .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tags {
+      margin-top: 23px;
+    }
+
+    .tag, .skill {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 11px;
+      background: var(--surface);
+      color: #c8d5e6;
+      font-size: 0.83rem;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #07130d;
+    }
+
+    .btn-secondary {
+      color: var(--accent);
+      background: transparent;
+    }
+
+    /* Cards and content */
+
+    .panel, .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px;
+    }
+
+    .panel p, .card p {
+      color: var(--muted);
+    }
+
+    .panel p + p, .card p + p {
+      margin-top: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: #4c876c;
+      transform: translateY(-3px);
+    }
+
+    .card .tag {
+      color: var(--accent);
+      background: rgba(110, 231, 168, 0.08);
+      margin-bottom: 17px;
+    }
+
+    .card .tech {
+      font-size: 0.85rem;
+      margin-top: 18px;
+    }
+
+    .card .project-link {
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: 22px;
+      font-size: 0.92rem;
+    }
+
+    .card .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .metric {
+      color: var(--text) !important;
+      font-size: 0.94rem;
+      margin-top: 14px;
+    }
+
+    .metric strong {
+      color: var(--accent);
+    }
+
+    /* Experience timeline */
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      border-left: 2px solid var(--accent);
+      padding: 5px 0 5px 23px;
+    }
+
+    .timeline-item .date {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* Education */
+
+    .education-meta {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin: 8px 0;
+    }
+
+    /* Contact */
+
+    .contact-panel {
+      background: linear-gradient(135deg, #14253a, #111b2e);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: clamp(25px, 5vw, 45px);
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 0.8rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+    }
+
+    @media (max-width: 430px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+        gap: 8px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a class="logo" href="#home">SANJAY<span class="accent">.</span></a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <div class="availability">
+          <span class="availability-dot"></span>
+          Cloud & Infrastructure Engineer · Building toward AI/ML
+        </div>
+
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Sanjay Bora<span class="accent">.</span></h1>
+        <h2>Aspiring AI/ML Engineer</h2>
+
+        <p class="hero-description">
+          I have a background in Cloud and Infrastructure Engineering
+          and a degree in Artificial Intelligence and Robotics.
+          I'm building practical AI applications through machine learning,
+          deep learning, and computer vision projects.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">AI Engineering</span>
+        </div>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#projects">Explore My Projects ↓</a>
+          <a class="btn btn-secondary"
+             href="https://www.linkedin.com/in/sanjaybora2004"
+             target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="btn btn-secondary"
+             href="https://github.com/sanjuus"
+             target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">A little about me</p>
+        <h2>About Me<span class="accent">.</span></h2>
+        <p class="section-description">
+          Combining a foundation in AI with professional engineering experience.
+        </p>
+      </div>
+
+      <div class="panel">
+        <p>
+          I'm Sanjay Bora, a B.Sc. graduate in Artificial Intelligence
+          and Robotics with a strong interest in building practical,
+          real-world AI solutions.
+        </p>
+        <p>
+          I currently work at LTM as a Cloud & Infrastructure Engineer,
+          supporting infrastructure-related activities, including P1
+          validation tasks. Alongside my professional role, I'm developing
+          my AI/ML engineering skills through hands-on projects.
+        </p>
+        <p>
+          My focus is on turning what I learn into working applications,
+          understanding model performance, evaluating results, and
+          gradually expanding my capabilities across AI engineering.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section container" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">Professional journey</p>
+        <h2>Experience<span class="accent">.</span></h2>
+        <p class="section-description">
+          My current professional experience and engineering background.
+        </p>
+      </div>
+
+      <div class="panel timeline">
+        <article class="timeline-item">
+          <p class="date">Current Role</p>
+          <h3>Cloud & Infrastructure Engineer</h3>
+          <p><strong>LTM</strong></p>
+          <p>
+            Work on cloud and infrastructure operations, including
+            P1-related validation activities and infrastructure checks.
+          </p>
+          <div class="tags">
+            <span class="tag">Infrastructure Operations</span>
+            <span class="tag">Validation Activities</span>
+            <span class="tag">Troubleshooting Support</span>
+          </div>
+        </article>
+      </div>
+      <p class="muted" style="margin-top: 15px; font-size: 0.88rem;">
+        Note: Add your exact employment start date and any additional
+        responsibilities you can confidently describe.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section container" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Academic background</p>
+        <h2>Education<span class="accent">.</span></h2>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Undergraduate Degree</span>
+          <h3>B.Sc. Artificial Intelligence and Robotics</h3>
+          <p><strong>Aditya Degree College</strong></p>
+          <p>Visakhapatnam (Vizag), Andhra Pradesh, India</p>
+          <p class="education-meta">Graduated in 2025</p>
+          <p class="metric">
+            Academic performance: <strong>87% / 9.16 CGPA</strong>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section container" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">My toolkit</p>
+        <h2>Technical Skills<span class="accent">.</span></h2>
+        <p class="section-description">
+          Technologies and concepts I've studied and applied in projects.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Programming & Data</h3>
+        <div class="skills">
+          <span class="skill">Python</span>
+          <span class="skill">NumPy</span>
+          <span class="skill">Pandas</span>
+          <span class="skill">Matplotlib</span>
+          <span class="skill">Data Preprocessing</span>
+        </div>
+
+        <h3 style="margin-top: 25px;">Machine Learning & Deep Learning</h3>
+        <div class="skills">
+          <span class="skill">Machine Learning</span>
+          <span class="skill">Deep Learning</span>
+          <span class="skill">Scikit-learn</span>
+          <span class="skill">PyTorch</span>
+          <span class="skill">Torchvision</span>
+          <span class="skill">Transfer Learning</span>
+          <span class="skill">Model Evaluation</span>
+          <span class="skill">Classification Metrics</span>
+        </div>
+
+        <h3 style="margin-top: 25px;">Computer Vision & Applications</h3>
+        <div class="skills">
+          <span class="skill">Computer Vision</span>
+          <span class="skill">Pillow</span>
+          <span class="skill">Image Classification</span>
+          <span class="skill">Streamlit</span>
+        </div>
+
+        <h3 style="margin-top: 25px;">Development Tools</h3>
+        <div class="skills">
+          <span class="skill">GitHub</span>
+          <span class="skill">Google Colab</span>
+          <span class="skill">Jupyter Notebooks</span>
+          <span class="skill">PyCharm</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section container" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Things I've built</p>
+        <h2>Featured Projects<span class="accent">.</span></h2>
+        <p class="section-description">
+          Hands-on projects that demonstrate my learning and practical
+          application of AI and deep learning.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Computer Vision · Deep Learning</span>
+          <h3>EcoVision AI</h3>
+          <p>
+            An AI-powered waste classification application that predicts
+            one of six waste categories from an uploaded image and provides
+            practical disposal guidance.
+          </p>
+          <p>
+            Built with transfer learning using a pretrained ResNet18
+            model, PyTorch, and a Streamlit interface.
+          </p>
+          <p class="metric">
+            Test Accuracy: <strong>88.68%</strong>
+          </p>
+          <p class="metric">
+            Macro F1-score: <strong>87.58%</strong>
+          </p>
+          <p class="tech">
+            Python · PyTorch · Torchvision · Streamlit · Pillow
+          </p>
+          <a class="project-link"
+             href="https://github.com/sanjuus/EcoVision-AI"
+             target="_blank" rel="noopener noreferrer">
+            View Source Code on GitHub ↗
+          </a>
+        </article>
+
+        <article class="card">
+          <span class="tag">Deep Learning · Medical Imaging</span>
+          <h3>Brain Tumour MRI Classification</h3>
+          <p>
+            A learning project exploring transfer learning with an
+            ImageNet-pretrained AlexNet model for brain tumour MRI image
+            classification.
+          </p>
+          <p>
+            This project helped me practise image classification workflows
+            and understand the use of pretrained neural networks.
+          </p>
+          <p class="tech">
+            Python · PyTorch · AlexNet · Transfer Learning
+          </p>
+          <span class="project-link">
+            Learning Project · Details Coming Soon
+          </span>
+        </article>
+      </div>
+
+      <p class="muted" style="margin-top: 22px; font-size: 0.9rem;">
+        EcoVision AI metrics are from evaluation on the project's held-out
+        test set. Predictions may be incorrect; the application is a
+        portfolio project, not a certified waste-management system.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="section container" id="contact">
+      <div class="contact-panel">
+        <p class="eyebrow">Get in touch</p>
+        <h2 style="margin-top: 12px;">
+          Let's connect<span class="accent">.</span>
+        </h2>
+        <p>
+          I'm continuing to build my AI/ML portfolio and strengthen
+          my engineering skills. Feel free to connect with me about
+          AI projects, collaboration, and relevant opportunities.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary"
+             href="mailto:sanjaybora2004@gmail.com">
+            Email Me ↗
+          </a>
+          <a class="btn btn-secondary"
+             href="https://www.linkedin.com/in/sanjaybora2004"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+          <a class="btn btn-secondary"
+             href="https://github.com/sanjuus"
+             target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        </div>
+
+        <p style="margin-top: 25px; font-size: 0.9rem;">
+          <span class="muted">Email:</span>
+          <a class="accent" href="mailto:sanjaybora2004@gmail.com">
+            sanjaybora2004@gmail.com
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 Sanjay Bora. Built with curiosity and a passion for AI.</p>
+      <a class="accent" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
+
